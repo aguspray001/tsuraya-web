@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.hero{
+  @apply bg-no-repeat bg-center bg-cover h-80 rounded-xl;
+  background-image: url("../public/bg-homepage.jpg");
+}
