@@ -34,7 +34,7 @@ const Layout = ({ children, title, description = null }) => {
           </svg>
           <span class="font-semibold text-xl tracking-tight">Tsuraya</span>
         </div>
-        <div class="block sm:hidden">
+        <div class="block lg:hidden">
           <button
             onClick={() => setOpenMenu((e) => !e)}
             class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
@@ -52,10 +52,10 @@ const Layout = ({ children, title, description = null }) => {
         {
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <ul class="text-sm lg:flex-grow lg:flex lg:justify-end lg:items-baseline">
-            {
+            { openMenu &&
               navigasi?.map((nav, key)=>{
                 return(
-                  <li key={key} class={`${asPath === nav.link && "bg-white"} rounded-xl py-1 px-2 mx-2`}>
+                  <li key={key} class={`rounded-xl py-1 px-2 mx-2`}>
                     <a
                       href={nav.link}
                       class={`block mt-4 lg:inline-block lg:mt-0 ${asPath === nav.link?"text-black":"text-white hover:text-gray-300"}  mr-4`}

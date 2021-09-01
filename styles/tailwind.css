@@ -12,6 +12,6 @@ body {
 }
 
 .hero{
-  @apply bg-no-repeat bg-center bg-cover h-80 rounded-xl;
+  @apply bg-no-repeat bg-center bg-cover rounded-xl;
   background-image: url("../public/bg-homepage.jpg");
 }
