@@ -11,7 +11,7 @@ const Catalog = () => {
 
     ]
     return (
-        <div id="/catalog" class="w-full h-96 flex flex-col sm:h-full sm:py-5 bg-blue-50 py-5">
+        <div id="catalog" class="w-full min-h-screen flex flex-col sm:h-full py-5 bg-gradient-to-tl from-blue-100">
             <div class="flex flex-col justify-center text-center">
                 <h1 class="font-semibold text-4xl mb-2 mt-1">Our Catalog</h1>
                 <p class="tracking-widest">Produk kami dibuat dengan presisi dan bahan berkualitas</p>
