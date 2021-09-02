@@ -15,6 +15,10 @@ const Layout = ({ children, title, description = null }) => {
 
   ]
 
+  const checkPath = (path) =>{
+    return asPath === path?"bg-white px-2 py-1 rounded-xl":"text-white hover:text-gray-300"
+  }
+
   return (
     <div>
       <Head>
@@ -52,13 +56,13 @@ const Layout = ({ children, title, description = null }) => {
         {
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <ul class="text-sm lg:flex-grow lg:flex lg:justify-end lg:items-baseline">
-            { openMenu &&
+            { 
               navigasi?.map((nav, key)=>{
                 return(
                   <li key={key} class={`rounded-xl py-1 px-2 mx-2`}>
                     <a
-                      href={nav.link}
-                      class={`block mt-4 lg:inline-block lg:mt-0 ${asPath === nav.link?"text-black":"text-white hover:text-gray-300"}  mr-4`}
+                      href={`#${nav.link}`}
+                      class={`block mt-4 lg:inline-block lg:mt-0 ${checkPath(nav.link)}  mr-4`}
                     >
                       {nav.title}
                     </a>
