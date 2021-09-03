@@ -5,7 +5,7 @@ const Hero = () => {
     <div id="hero" class="bg-white lg:grid lg:grid-cols-12">
       <div class="lg:col-span-6">
         <div class="flex flex-col items-center pt-36">
-          <span class="pb-1 text-4xl block text-transparent bg-clip-text bg-blue-800">
+          <span class="pb-1 text-4xl block text-transparent bg-clip-text bg-blue-500">
             Welcome to <strong>Tsuraya</strong>
           </span>
           <span>

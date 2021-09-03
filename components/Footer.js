@@ -3,12 +3,12 @@ import {FaFacebook, FaWhatsapp} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer class="w-full sm:h-full mobile-first:h-full h-80 bg-blue-800 m-0 p-10 sm:px">
-      <div class="flex lg:flex-row sm:flex-col mobile-first:flex-col justify-between items-center">
-        <div class="flex flex-col w-1/2 text-center text-white mobile-first:py-10">
+    <footer class="w-full sm:h-full xs:h-full h-80 bg-blue-500 m-0 p-10 sm:px">
+      <div class="flex lg:flex-row sm:flex-col xs:flex-col justify-between items-center">
+        <div class="flex flex-col w-1/2 text-center text-white xs:py-10">
           <span class="text-5xl">Tsuraya</span>
         </div>
-        <div class="flex flex-col w-1/2 text-center mx-2 text-white sm:py-20 mobile-first:py-10">
+        <div class="flex flex-col w-1/2 text-center mx-2 text-white sm:py-20 xs:py-10">
           <p class="font-semibold mb-5">About Us</p>
           <h1>Company</h1>
           <h1>Location</h1>
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
         <div class="flex flex-col w-1/2 text-center mx-2 text-white justify-center items-center">
           <span class="font-semibold mb-5">Contact</span>
-          <div class="text-center mobile-first:flex mobile-first:flex-row mobile-first:w-40 mobile-first:justify-around">
+          <div class="text-center xs:flex xs:flex-row xs:w-40 xs:justify-around">
             <FaFacebook style={{fontSize:40, marginBottom:10}}/>
             <FaWhatsapp style={{fontSize:40, marginBottom:10}}/>
           </div>

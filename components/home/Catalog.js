@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { catalogOne, catalogTwo, catalogThree, catalogFour } from '../../assets'
+import Card from '../Card'
+import Carousel from '../Carousel'
 
 const Catalog = () => {
     const dataCatalog = [
@@ -11,19 +13,18 @@ const Catalog = () => {
 
     ]
     return (
-        <div id="catalog" class="w-full min-h-screen flex flex-col sm:h-full py-5 bg-gradient-to-tl from-blue-100">
+        <div id="catalog" class="w-full min-h-screen flex flex-col justify-center items-center sm:h-full py-5 bg-gradient-to-tl from-blue-100">
             <div class="flex flex-col justify-center text-center">
                 <h1 class="font-semibold text-4xl mb-2 mt-1">Our Catalog</h1>
                 <p class="tracking-widest">Produk kami dibuat dengan presisi dan bahan berkualitas</p>
             </div>
-            <div class="flex flex-wrap mobile-first:overflow-x-auto mobile-first:max-h-80 mobile-first:flex-row justify-around pt-10 px-20 items-center">
+            <Carousel />
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 p-5 xs:grid-cols-1 xs:gap-10">
             {
                 dataCatalog?.map((catalog)=>{
                     return(
-                        <button class={`flex flex-col transition duration-700 ease-in-out transform hover:scale-110 shadow-lg my-2 bg-white ${catalog.image === catalogOne? "lg:h-56 lg:w-56 sm:h-40 sm:w-40" : "lg:h-40 lg:w-40 sm:h-40 sm:w-40"} cursor-pointer items-center justify-center rounded-lg`}>
-                            <Image src={catalog.image} width={300} height={300} alt={catalog.title} class="rounded-t-lg"/>
-                            <span>{catalog.title}</span>
-                        </button>
+                        <Card title={catalog.title}/>
                     )
                 })
             }
