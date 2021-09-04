@@ -21,7 +21,7 @@ const ScrollToTop = () => {
     })
 
     return (
-        <button onClick={()=>scrollTop()} class={`transform hover:scale-125 transition duration-500 ease-out ${showScroll === true?"block":"hidden"}`}>
+        <button onClick={()=>scrollTop()} className={`transform hover:scale-125 transition duration-500 ease-out ${showScroll === true?"block":"hidden"}`}>
             <FaArrowCircleUp style={{fontSize:40, color:'gray'}} title="back to top"/>
         </button>
     )

@@ -13,21 +13,21 @@ const Catalog = () => {
 
     ]
     return (
-        <div id="catalog" class="w-full min-h-screen flex flex-col justify-center items-center sm:h-full py-5 bg-gradient-to-tl from-blue-100">
-            <div class="flex flex-col justify-center text-center">
-                <h1 class="font-semibold text-4xl mb-2 mt-1">Our Catalog</h1>
-                <p class="tracking-widest">Produk kami dibuat dengan presisi dan bahan berkualitas</p>
+        <div id="catalog" className="w-full min-h-screen flex flex-col justify-center items-center sm:h-full py-5 bg-gradient-to-tl from-blue-100">
+            <div className="flex flex-col justify-center text-center">
+                <h1 className="font-semibold text-4xl mb-2 mt-1">Our Catalog</h1>
+                <p className="tracking-widest">Produk kami dibuat dengan presisi dan bahan berkualitas</p>
             </div>
-            <Carousel />
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 p-5 xs:grid-cols-1 xs:gap-10">
-            {
-                dataCatalog?.map((catalog)=>{
-                    return(
-                        <Card title={catalog.title}/>
-                    )
-                })
-            }
+            <div className="flex min-w-full overflow-x-auto overflow-hidden">
+                <div className="grid py-5 px-10 grid-cols-6 gap-x-64 w-40 sm:grid-cols-2 sm:gap-10 sm:w-full sm:mx-auto md:grid-cols-3 lg:grid-cols-4">
+                {
+                    dataCatalog?.map((catalog, key)=>{
+                        return(
+                            <Card key={key} title={catalog.title}/>
+                        )
+                    })
+                }
+                </div>
             </div>
         </div>
     )

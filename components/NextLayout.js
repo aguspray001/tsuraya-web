@@ -13,43 +13,47 @@ const NextLayout = ({children, title, description}) => {
             <meta name="description" content={description}></meta>
         </Head>
         {/* <!-- Navbar goes here --> */}
-		<nav class="bg-white shadow-lg border-2 fixed z-10 w-full">
-			<div class="max-w-6xl mx-auto px-4">
-				<div class="flex justify-between">
-					<div class="flex space-x-7">
+		<nav className="bg-white shadow-lg border-2 fixed z-10 w-full">
+			<div className="max-w-6xl mx-auto px-4">
+				<div className="flex justify-between">
+					<div className="flex space-x-7">
 						<div>
 							{/* <!-- Website Logo --> */}
-							<a href="#" class="flex items-center py-4 px-2">
-								{/* <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2"/> */}
-								<span class="font-semibold text-blue-500 text-lg">Tsuraya Truss</span>
+							<a href="#" className="flex items-center py-4 px-2">
+								{/* <img src="logo.png" alt="Logo" className="h-8 w-8 mr-2"/> */}
+								<span className="font-semibold text-blue-500 text-lg">Tsuraya Truss</span>
 							</a>
 						</div>
 						{/* <!-- Primary Navbar items --> */}
-						<div class="hidden md:flex items-center space-x-1">
-							<a class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold ">
+						<div className="hidden md:flex items-center space-x-1">
+							<a className="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold ">
 								<Link href="/">Home</Link>
 							</a>
-							<a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About Us</a>
-							<a class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">
+							<a className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">
 								<Link href="#catalog">Catalog</Link>
 							</a>
-							<a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Project</a>
+							<a className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">
+								<Link href="#">About Us</Link>
+							</a>
+							<a className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">
+								<Link href="#">Projects</Link>
+							</a>
 						</div>
 					</div>
 					{/* <!-- Secondary Navbar items --> */}
-					{/* <div class="hidden md:flex items-center space-x-3 ">
-						<a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">Log In</a>
-						<a href="" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
+					{/* <div className="hidden md:flex items-center space-x-3 ">
+						<a href="" className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">Log In</a>
+						<a href="" className="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
 					</div> */}
 					{/* <!-- Mobile menu button --> */}
-					<div class="md:hidden flex items-center">
-						<button class="outline-none mobile-menu-button" onClick={()=>setShowMenu((e)=>!e)}>
-						<svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 "
+					<div className="md:hidden flex items-center">
+						<button className="outline-none mobile-menu-button" onClick={()=>setShowMenu((e)=>!e)}>
+						<svg className=" w-6 h-6 text-gray-500 hover:text-blue-500 "
 							x-show="!showMenu"
 							fill="none"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
 						>
@@ -60,12 +64,12 @@ const NextLayout = ({children, title, description}) => {
 				</div>
 			</div>
 			{/* <!-- mobile menu --> */}
-			<div class={`${showMenu===true?"block":"hidden"} md:hidden mobile-menu`}>
-				<ul class="">
-					<li class="active"><a href="/" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Home</a></li>
-					<li><a href="#" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Abous Us</a></li>
-					<li><a href="#catalog" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Catalog</a></li>
-					<li><a href="#" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Projects</a></li>
+			<div className={`${showMenu===true?"block":"hidden"} md:hidden mobile-menu`}>
+				<ul className="">
+					<li className="active"><a className="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold"><Link href="/">Home</Link></a></li>
+					<li><a className="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"><Link href="/">Catalog</Link></a></li>
+					<li><a className="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"><Link href="/">About Us</Link></a></li>
+					<li><a className="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"><Link href="/">Projects</Link></a></li>
 				</ul>
 			</div>
 		</nav>
