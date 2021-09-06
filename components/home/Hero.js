@@ -2,14 +2,14 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div id="hero" className="bg-white lg:grid lg:grid-cols-12">
+    <div id="hero" className="bg-white pt-20 lg:grid lg:grid-cols-12">
       <div className="lg:col-span-6">
         <div className="flex flex-col items-center pt-36">
           <span className="pb-1 text-4xl block text-transparent bg-clip-text bg-blue-500">
-            Welcome to <strong>Tsuraya</strong>
+            Welcome to <span className="text-4xl font-bold">Tsuraya</span>
           </span>
           <span>
-            Build the things <strong>easily</strong>
+            Build the things <span className="text-xl font-bold">easily</span> and <span className="text-xl font-bold">lightly</span>
           </span>
         </div>
       </div>

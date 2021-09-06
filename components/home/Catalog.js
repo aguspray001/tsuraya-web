@@ -23,7 +23,7 @@ const Catalog = () => {
                 {
                     dataCatalog?.map((catalog, key)=>{
                         return(
-                            <Card key={key} title={catalog.title}/>
+                            <Card key={key} title={catalog.title} image={catalog.image}/>
                         )
                     })
                 }
