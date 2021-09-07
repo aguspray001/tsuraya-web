@@ -36,7 +36,7 @@ const NextLayout = ({children, title, description}) => {
 								<Link href="#">About Us</Link>
 							</a>
 							<a className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">
-								<Link href="#">Projects</Link>
+								<Link href="#project">Projects</Link>
 							</a>
 						</div>
 					</div>
@@ -73,7 +73,11 @@ const NextLayout = ({children, title, description}) => {
 				</ul>
 			</div>
 		</nav>
-        {children}
+		<div className="bg-white overflow-hidden">
+			<div className="relative mx-auto px-3 max-w-7xl">
+			{children}
+			</div>
+		</div>
         </div>
     )
 }

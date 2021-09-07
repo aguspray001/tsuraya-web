@@ -1,7 +1,10 @@
 import React from "react";
-import {FaFacebook, FaWhatsapp} from "react-icons/fa";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
+  const msg = "dawedwead";
+  const mobile = "085961142551";
   return (
     <footer className="w-full h-full bg-blue-500 m-0 p-10 sm:h-full">
       <div className="flex flex-col justify-between items-center sm:flex-col lg:flex-row">
@@ -17,12 +20,24 @@ const Footer = () => {
         <div className="flex flex-col w-1/2 text-center mx-2 text-white justify-center items-center">
           <span className="font-semibold mb-5">Contact</span>
           <div className="text-center flex flex-row w-40 justify-around">
-            <FaFacebook style={{fontSize:40, marginBottom:10}}/>
-            <FaWhatsapp style={{fontSize:40, marginBottom:10}}/>
+            <Link passHref={true} href="/">
+              <FaFacebook
+                className="hover:scale-105 transform"
+                style={{ fontSize: 40, marginBottom: 10 }}
+              />
+            </Link>
+            <Link passHref={true} href={`whatsapp://send?text=${msg}&phone=${mobile}`}>
+              <FaWhatsapp
+                className="hover:scale-105 transform"
+                style={{ fontSize: 40, marginBottom: 10 }}
+              />
+            </Link>
           </div>
         </div>
       </div>
-      <h1 className="text-center my-10 text-white">© Tsuraya Truss 2021. All Rights Reserved.</h1>
+      <h1 className="text-center my-10 text-white">
+        © Tsuraya Truss 2021. All Rights Reserved.
+      </h1>
     </footer>
   );
 };

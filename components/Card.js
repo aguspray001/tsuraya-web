@@ -7,10 +7,10 @@ const Card = ({title, image}) => {
         <div className="p-5">
           <h1 className="text-2xl font-bold">{title}</h1>
           <p className="mt-2 text-lg font-semibold text-gray-600">Spesifikasi : </p>
-          <p className="mt-1 text-gray-500 font-">Lorem ipsum carrots, enhanced undergraduate developer, 
-            but they do occaecat time and vitality, Lorem ipsum carrots, 
-            enhanced undergraduate developer, but they do occaecat time 
-            and vitality</p>
+          <p className="mt-1 text-gray-500 font-">Panjang :</p>
+          <p className="mt-1 text-gray-500 font-">Lebar :</p>
+          <p className="mt-1 text-gray-500 font-">Ketebalan :</p>
+          <p className="mt-1 text-gray-500 font-">Harga :</p>
         </div>
       </div>
     )
