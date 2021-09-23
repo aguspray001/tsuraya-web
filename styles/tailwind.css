@@ -4,38 +4,41 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Inter";
-}
-
-.bg-image{
-  @apply bg-no-repeat bg-center bg-cover;
-}
-.project-1{
-  background-image: url("../assets/images/project-1.png");
-}
-.project-2{
-  background-image: url("../assets/images/project-2.png");
-}
-.project-3{
-  background-image: url("../assets/images/project-3.jpg");
-}
-.project-4{
-  background-image: url("../assets/images/project-4.jpg");
-}
-.project-5{
-  background-image: url("../assets/images/project-5.jpg");
-}
-.project-6{
-  background-image: url("../assets/images/project-6.jpg");
+/* override component tailwind css */
+@layer component{
+  * {
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter";
+  }
+  
+  .bg-image{
+    @apply bg-no-repeat bg-center bg-cover;
+  }
+  .project-1{
+    background-image: url("../assets/images/project-1.png");
+  }
+  .project-2{
+    background-image: url("../assets/images/project-2.png");
+  }
+  .project-3{
+    background-image: url("../assets/images/project-3.jpg");
+  }
+  .project-4{
+    background-image: url("../assets/images/project-4.jpg");
+  }
+  .project-5{
+    background-image: url("../assets/images/project-5.jpg");
+  }
+  .project-6{
+    background-image: url("../assets/images/project-6.jpg");
+  }
 }
