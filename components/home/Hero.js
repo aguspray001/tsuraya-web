@@ -1,33 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "../Button";
+import Image from "next/image";
+import { ManufactureImage } from "../../assets/images";
+import PemesananForm from "../PemesananForm";
 
 const Hero = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const onShowModal = () => {
+    setIsShowModal(!isShowModal);
+  }
+
+
   return (
-    <div id="hero" className="bg-white pt-20 lg:grid lg:grid-cols-12">
-      <div className="lg:col-span-6">
-        <div className="flex flex-col items-center pt-36">
-          <span className="pb-1 text-4xl block text-transparent bg-clip-text bg-black">
-            Welcome to <span className="text-4xl font-bold text-blue-500">Tsuraya</span>
+    <div id="hero" className="relative grid bg-white pt-20 grid-cols-12 justify-center items-center">
+      {
+        isShowModal && (
+          <div className="absolute z-[9999] w-full right-0 left-0 mx-auto sm:w-[80%]">
+            <PemesananForm onClose={onShowModal}/>
+          </div>
+        )
+      }
+      <div className="col-span-12 sm:col-span-6">
+        <div className="flex flex-col items-center justify-center">
+          <span className="pb-1 text-2xl block text-transparent bg-clip-text bg-black text-center sm:text-4xl">
+            Welcome to <span className="text-2xl font-bold text-blue-500 sm:text-4xl">Tsuraya</span>
           </span>
-          <span>
-            Build the things <span className="text-xl font-bold">easily</span> and <span className="text-xl font-bold">lightly</span>
+          <span className="mb-10">
+            Build the things <span className="text-xl font-bold">easier</span> and <span className="text-xl font-bold">stronger</span>
           </span>
+          <Button title="Pesan Sekarang" onClick={onShowModal}/>
         </div>
       </div>
-      <div className="lg:col-span-6 px-10 py-10">
-        <div
-          className="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          <span className="sr-only">Watch our video to learn more</span>
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube-nocookie.com/embed/9viHdDVNNH0"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+      <div className="col-span-12 mt-4 sm:col-span-6">
+        <Image src={ManufactureImage} alt="manufacture image"/>
       </div>
     </div>
   );

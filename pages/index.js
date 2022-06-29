@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <Catalog />
       <Projects />
-      <Footer />
       <div className="fixed bottom-10 right-10">
         <ScrollToTop />
       </div>

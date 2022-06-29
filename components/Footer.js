@@ -6,7 +6,7 @@ const Footer = () => {
   const msg = "dawedwead";
   const mobile = "085961142551";
   return (
-    <footer className="w-full h-full bg-blue-500 m-0 p-10 sm:h-full">
+    <footer className="w-full h-full bg-blue-500 m-0 px-2 py-2 sm:h-full">
       <div className="flex flex-col justify-between items-center sm:flex-col lg:flex-row">
         <div className="flex flex-col w-1/2 py-2 text-center text-white">
           <span className="text-5xl">Tsuraya</span>
@@ -22,13 +22,13 @@ const Footer = () => {
           <div className="text-center flex flex-row w-40 justify-around">
             <Link passHref={true} href="/">
               <FaFacebook
-                className="hover:scale-105 transform"
+                className="hover:scale-105 transform cursor-pointer"
                 style={{ fontSize: 40, marginBottom: 10 }}
               />
             </Link>
             <Link passHref={true} href={`whatsapp://send?text=${msg}&phone=${mobile}`}>
               <FaWhatsapp
-                className="hover:scale-105 transform"
+                className="hover:scale-105 transform cursor-pointer"
                 style={{ fontSize: 40, marginBottom: 10 }}
               />
             </Link>

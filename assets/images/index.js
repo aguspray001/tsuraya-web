@@ -9,6 +9,7 @@ import projectThree from "./project-3.jpg"
 import projectFour from "./project-4.jpg"
 import projectFive from "./project-5.jpg"
 import projectSix from "./project-6.jpg"
+import ManufactureImage from "./manufacture.svg"
 
 
 
@@ -24,4 +25,5 @@ export {
     projectFour,
     projectFive,
     projectSix,
+    ManufactureImage
 }
